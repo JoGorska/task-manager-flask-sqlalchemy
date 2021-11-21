@@ -112,6 +112,9 @@ No errors were found when passing through the official [W3C validator](https://j
 
 Javascript files were tested with the jshint and no errors were been found. 
 
++ Python
+
+
 ## Project Bugs and Solutions:
 
 
