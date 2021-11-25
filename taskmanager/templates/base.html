@@ -36,11 +36,10 @@
                 <li><a href="{{ url_for('home') }}">Home</a></li>
                 <li><a href="">New Task</a></li>
                 <li><a href="">Categories</a></li>
-
-
             </ul>
             </div>
         </nav>
+
         <!-- mobiles nav bar -->
         <ul class="sidenav" id="mobile-demo">
             <li><a href="{{ url_for('home') }}">Home</a></li>
@@ -48,6 +47,28 @@
             <li><a href="">Categories</a></li>
         </ul>
    </header>
+
+   <main>
+       {% block content %}
+
+       {% endblock %}
+   </main>
+
+   <!-- footer -->
+   
+   <footer class="page-footer blue darken-3">
+    <div class="footer-copyright">
+        <div class="container">
+            For educational purposes only
+            <a class="white-text right" href="https://codeinstitute.net" target="_blank">&copy; Code Institute</a>
+        </div>
+    </div>
+</footer>
+
+
+
+
+   
 
     <!-- jQuery link needs to bo before materialize -->
     <!--Jquery script-->
