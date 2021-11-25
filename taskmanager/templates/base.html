@@ -1,37 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Fontawsome -->
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
-
-    <!-- Materialise css -->
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
         type="text/css">
-
-    <!-- Link to own style.css file, needs to be url_for, not just a directory, otherwise would cause errors -->
-
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
-
     <title>Task Manager</title>
 </head>
+
 <body>
 
     <header>
-       
-        <nav class="light-green lighten-1">
-            
+        <!-- top navbar -->
+        <nav class="light-blue darken-1">
             <div class="nav-wrapper">
-                <a href="{{ url_for('home') }}" class="brand-logo">Task Manager</a>
-                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
-            <!-- desktop nav bar -->
+            <a href="{{ url_for('home') }}" class="brand-logo">Task Manager</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="{{ url_for('home') }}">Home</a></li>
                 <li><a href="">New Task</a></li>
@@ -40,43 +30,29 @@
             </div>
         </nav>
 
-        <!-- mobiles nav bar -->
+        <!-- mobile sidenav -->
         <ul class="sidenav" id="mobile-demo">
             <li><a href="{{ url_for('home') }}">Home</a></li>
             <li><a href="">New Task</a></li>
             <li><a href="">Categories</a></li>
         </ul>
-   </header>
+    </header>
 
-   <!-- main content -->
-   
-   <main class="container">
-       {% block content %}
+    <main class="container">
+        {% block content %}
+        {% endblock %}
+    </main>
 
-       {% endblock %}
-   </main>
-
-   <!-- footer -->
-
-   <footer class="page-footer light-green darken-2">
-    <div class="footer-copyright">
-        <div class="container">
-            For educational purposes only
-            <a class="white-text right" href="https://codeinstitute.net" target="_blank">&copy; Code Institute</a>
+    <footer class="page-footer blue darken-3">
+        <div class="footer-copyright">
+            <div class="container">
+                For educational purposes only
+                <a class="white-text right" href="https://codeinstitute.net" target="_blank">&copy; Code Institute</a>
+            </div>
         </div>
-    </div>
-</footer>
-
-    <!-- jQuery link needs to bo before materialize -->
-    <!--Jquery script-->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
-
-    <!-- Materialize javascript -->
+    </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-    <!-- Link to our script.js file, need to use url_for this needs to be used for all internal files within our workspace / project or images. -->
-
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 
 </body>

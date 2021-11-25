@@ -1,6 +1,5 @@
-
-// this is to initialize navbar from materialize
-
-$(document).ready(function(){
-    $('.sidenav').sidenav();
-  });
+document.addEventListener("DOMContentLoaded", function() {
+  // sidenav initialization
+  let sidenav = document.querySelectorAll(".sidenav");
+  M.Sidenav.init(sidenav);
+});
