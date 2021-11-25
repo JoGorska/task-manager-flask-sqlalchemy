@@ -14,7 +14,7 @@
     <!-- Materialise css -->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    type="text/css">
+        type="text/css">
 
     <!-- Link to own style.css file, needs to be url_for, not just a directory, otherwise would cause errors -->
 
@@ -29,8 +29,8 @@
         <nav class="light-green lighten-1">
             
             <div class="nav-wrapper">
-            <a href="{{ url_for('home') }}" class="brand-logo">Task Manager</a>
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
+                <a href="{{ url_for('home') }}" class="brand-logo">Task Manager</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
             <!-- desktop nav bar -->
             <ul class="right hide-on-med-and-down">
                 <li><a href="{{ url_for('home') }}">Home</a></li>
@@ -50,7 +50,7 @@
 
    <!-- main content -->
    
-   <main>
+   <main class="container">
        {% block content %}
 
        {% endblock %}
