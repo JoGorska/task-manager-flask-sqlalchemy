@@ -4,11 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Materialise css -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    type="text/css">
+
+    <!-- Link to own style.css file, needs to be url_for, not just a directory, otherwise would cause errors -->
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
+
     <title>Task Manager</title>
 </head>
 <body>
 
     Hello World!
+
+    <!-- jQuery link needs to bo before materialize -->
+
+    <!-- Materialize javascript -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- Link to our script.js file, need to use url_for this needs to be used for all internal files within our workspace / project or images. -->
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 
 </body>
 </html>
