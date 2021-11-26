@@ -31,6 +31,7 @@ def add_category():
         # the user back to categories.html page
         return redirect(url_for("categories"))
 
-    # default method is get - so this will return "add_category.html" unless the method is POST
+    # default method is get - so this will return "add_category.html" unless
+    #  the method is POST
     # it is good practice to add error handling and defence programing here
     return render_template("add_category.html")
