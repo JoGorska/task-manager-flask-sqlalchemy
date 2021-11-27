@@ -13,7 +13,7 @@
             <div class="input-field col s12 light-green-text">
                 <i class="fas fa-folder-open prefix light-green-text"></i>
                 <!-- name, id and "for" need to be matching -->
-                <input id="category_name" name="category_name" minlength="3" maxlength="25" type="text" class="validate light-green-text" required>
+                <input id="category_name" name="category_name" value="{{ category.category_name }}" minlength="3" maxlength="25" type="text" class="validate light-green-text" required>
                 <label class="light-green-text" for="category_name">Category Name</label>
             </div>
         </div>

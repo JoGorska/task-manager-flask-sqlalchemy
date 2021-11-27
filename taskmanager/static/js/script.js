@@ -4,3 +4,10 @@
 $(document).ready(function(){
     $('.sidenav').sidenav();
   });
+
+  // this is to initialize modal from materialize
+
+  
+  $(document).ready(function(){
+    $('.modal').modal();
+  });
