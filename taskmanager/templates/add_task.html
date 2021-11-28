@@ -11,56 +11,56 @@
         <!-- task name -->
         <div class="row">
             <div class="input-field col s12 light-green-text">
-                <i class="fas fa-pencil-alt prefix light-blue-text text-darken-4"></i>
+                <i class="fas fa-pencil-alt prefix light-green-text"></i>
                 <!-- name and id and label for needs to be matching -->
                 <input id="task_name" name="task_name" minlength="5" maxlength="50" type="text" class="validate" required>
                 <label class="light-green-text" for="task_name">Task Name</label>
             </div>
         </div>
 
-            <!-- task description -->
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-align-left prefix light-blue-text text-darken-4"></i>
-                    <textarea id="task_description" name="task_description" minlength="5" maxlength="200"
-                        type="text" class="materialize-textarea validate" required></textarea>
-                    <label for="task_description">Task Description</label>
+        <!-- task description -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-align-left prefix light-green-text"></i>
+                <textarea id="task_description" name="task_description" minlength="5" maxlength="200"
+                    type="text" class="materialize-textarea validate" required></textarea>
+                <label for="task_description">Task Description</label>
+            </div>
+        </div>
+        <!-- due date -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-calendar-alt prefix light-green-text"></i>
+                <input id="due_date" name="due_date" type="text" class="datepicker validate" required>
+                <label for="due_date">Due Date</label>
+            </div>
+        </div>
+        <!-- is urgent -->
+        <div class="row">
+            <div class="input-field col s12">
+                <div class="switch">
+                    <i class="fas fa-exclamation-circle prefix light-green-text"></i>
+                    <label for="is_urgent">
+                        <input id="is_urgent" name="is_urgent" type="checkbox">
+                        <span class="lever"></span>
+                        Is Urgent
+                    </label>
                 </div>
             </div>
-            <!-- due date -->
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-calendar-alt prefix light-blue-text text-darken-4"></i>
-                    <input id="due_date" name="due_date" type="text" class="datepicker validate" required>
-                    <label for="due_date">Due Date</label>
-                </div>
+        </div>
+        <!-- category id -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-folder-open prefix light-green-text"></i>
+                <select id="category_id" name="category_id" class="validate" required>
+                    <option value="" disabled selected >Choose Category</option>
+                    {% for category in categories %}
+                        <option value="{{ category.id }}" class="light-green-text">{{ category.category_name }}</option>
+                    {% endfor %}
+                </select>
+                <label for="category_id">Category</label>
             </div>
-            <!-- is urgent -->
-            <div class="row">
-                <div class="input-field col s12">
-                    <div class="switch">
-                        <i class="fas fa-exclamation-circle prefix light-blue-text text-darken-4"></i>
-                        <label for="is_urgent">
-                            <input id="is_urgent" name="is_urgent" type="checkbox">
-                            <span class="lever"></span>
-                            Is Urgent
-                        </label>
-                    </div>
-                </div>
-            </div>
-            <!-- category id -->
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-folder-open prefix light-blue-text text-darken-4"></i>
-                    <select id="category_id" name="category_id" class="validate" required>
-                        <option value="" disabled selected>Choose Category</option>
-                        {% for category in categories %}
-                            <option value="{{ category.id }}">{{ category.category_name }}</option>
-                        {% endfor %}
-                    </select>
-                    <label for="category_id">Category</label>
-                </div>
-            </div>
+        </div>
 
 
         <!-- submit button -->
