@@ -13,7 +13,7 @@
             <div class="input-field col s12 light-green-text">
                 <i class="fas fa-pencil-alt prefix light-green-text"></i>
                 <!-- name and id and label for needs to be matching -->
-                <input id="task_name" name="task_name" minlength="5" maxlength="50" type="text" class="validate" required>
+                <input id="task_name" name="task_name" minlength="5" maxlength="50" type="text" class="validate white-text" required>
                 <label class="light-green-text" for="task_name">Task Name</label>
             </div>
         </div>
@@ -23,7 +23,7 @@
             <div class="input-field col s12">
                 <i class="fas fa-align-left prefix light-green-text"></i>
                 <textarea id="task_description" name="task_description" minlength="5" maxlength="200"
-                    type="text" class="materialize-textarea validate" required></textarea>
+                    type="text" class="materialize-textarea validate white-text" required></textarea>
                 <label for="task_description">Task Description</label>
             </div>
         </div>
@@ -31,7 +31,7 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-calendar-alt prefix light-green-text"></i>
-                <input id="due_date" name="due_date" type="text" class="datepicker validate" required>
+                <input id="due_date" name="due_date" type="text" class="datepicker validate white-text" required>
                 <label for="due_date">Due Date</label>
             </div>
         </div>
@@ -55,7 +55,7 @@
                 <select id="category_id" name="category_id" class="validate" required>
                     <option value="" disabled selected >Choose Category</option>
                     {% for category in categories %}
-                        <option value="{{ category.id }}" class="light-green-text">{{ category.category_name }}</option>
+                        <option value="{{ category.id }}" class="green-text">{{ category.category_name }}</option>
                     {% endfor %}
                 </select>
                 <label for="category_id">Category</label>
