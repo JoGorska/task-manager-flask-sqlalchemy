@@ -5,7 +5,8 @@ from taskmanager.models import Category, Task
 
 @app.route("/")
 def home():
-    return render_template("tasks.html")
+    tasks = list(Task.query.order_by(Task.category_id).all())
+    return render_template("tasks.html", tasks=tasks)
 
 # navbar reffers to the name of the junction not the @app.route("/categories")
 
@@ -75,3 +76,4 @@ def add_task():
         return redirect(url_for("home"))
 
     return render_template("add_task.html", categories=categories)
+

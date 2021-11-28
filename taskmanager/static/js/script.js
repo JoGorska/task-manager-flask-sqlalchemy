@@ -22,12 +22,18 @@ $(document).ready(function(){
     $('select').formSelect();
   });
 
+  // collapsible initializataion
+  $(document).ready(function(){
+    $('.collapsible').collapsible();
+  });
+
   document.addEventListener("DOMContentLoaded", function() {
 
-      // datepicker initialization
-      let datepicker = document.querySelectorAll(".datepicker");
-      M.Datepicker.init(datepicker, {
-          format: "dd mmmm, yyyy",
-          i18n: {done: "Select"}
-      });
+    // datepicker initialization
+    let datepicker = document.querySelectorAll(".datepicker");
+    M.Datepicker.init(datepicker, {
+        format: "dd mmmm, yyyy",
+        i18n: {done: "Select"}
     });
+
+  });
