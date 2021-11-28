@@ -11,3 +11,13 @@ $(document).ready(function(){
   $(document).ready(function(){
     $('.modal').modal();
   });
+
+  // datepicker initialization
+  $(document).ready(function(){
+    $('.datepicker').datepicker();
+  });
+
+  // select initialization
+  $(document).ready(function(){
+    $('select').formSelect();
+  });
